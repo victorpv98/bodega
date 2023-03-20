@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root "home#dashboard"
+  resources :products do
+    member do
+      get :new_movement
+      post :create_movement
+    end
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
