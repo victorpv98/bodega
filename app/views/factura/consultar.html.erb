@@ -1,0 +1,19 @@
+<h1>Consultar Generar</h1>
+
+<%= form_tag consultar_path method="post" do %>
+  <br>
+  <%= label_tag :tipo_de_comprobante, "Tipo de comprobante:" %>
+  <%= text_field_tag :tipo_de_comprobante %>
+  <br>
+  <%= label_tag :serie, "Serie" %>
+  <%= text_field_tag :serie %>
+  <br>
+  <%= label_tag :numero, "Numero" %>
+  <%= number_field_tag :numero %>
+  <br>
+  <%= submit_tag "Consultar comprobante" %>
+  <br>
+  <h1>Resultados de la consulta:</h1><br>
+  <p><%= @resultado %></p>
+  
+<% end %>

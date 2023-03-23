@@ -1,0 +1,21 @@
+<h1>Factura Generar</h1>
+
+<%= form_tag generar_path method="post" do %>
+  <br>
+  <%= label_tag :tipo_de_comprobante, "Tipo de comprobante" %>
+  <%= text_field_tag :tipo_de_comprobante %>
+  <br>
+  <%= label_tag :numero, "Numero" %>
+  <%= number_field_tag :numero %>
+  <br>
+  <%= label_tag :cliente_numero_de_documento, "Numero de Documento" %>
+  <%= text_field_tag :cliente_numero_de_documento %>
+  <br>
+  <%= label_tag :cliente_denominacion, "Denominacion" %>
+  <%= text_field_tag :cliente_denominacion %>
+  <br>
+  <br>
+  <%= submit_tag "Generar comprobante" %>
+  
+  
+<% end %>

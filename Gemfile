@@ -75,4 +75,6 @@ gem 'rubyzip', '>= 1.2.1'
 gem 'axlsx'
 gem 'axlsx_rails'
 
-gem 'httparty'
+gem 'uri'
+gem 'json'
+gem 'net-http'

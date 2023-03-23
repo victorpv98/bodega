@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'factura_electronica/generar_comprobante'
-  get 'factura_electronica/consultar_comprobante'
+
   root "home#dashboard"
   resources :products do
     member do
@@ -8,5 +7,10 @@ Rails.application.routes.draw do
       post :create_movement
     end
   end
+
+  get '/generar', to: 'factura#generar'
+  get '/consultar', to: 'factura#consultar'
+  post '/generar', to: 'factura#generar'
+  post '/consultar', to: 'factura#consultar'
 
 end
